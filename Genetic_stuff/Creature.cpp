@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 Creature::Creature() {
 
+	Timer timer;
 	srand(time(NULL));
 
 	int to = rand() % 100000000 + 10000000;
@@ -55,4 +58,15 @@ void Creature::recreate() {
 void Creature::getFittness() {
 
 	std::cout << "Fittness: " << fittness << std::endl;
+}
+
+Creature::Timer::Timer() {
+	Timer::start = std::chrono::high_resolution_clock::now();
+}
+
+Creature::Timer::~Timer() {
+	Timer::end = std::chrono::high_resolution_clock::now();
+	Timer::duration = Timer::end - Timer::start;
+	float ms = duration.count() * 1000.0f;
+	std::cout << "Timer took " << ms << "ms\n";
 }
