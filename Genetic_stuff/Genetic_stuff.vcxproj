@@ -155,9 +155,11 @@
   <ItemGroup>
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="Genetic_stuff.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creature.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
