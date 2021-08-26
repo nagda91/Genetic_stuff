@@ -34,9 +34,6 @@ Creature::Creature()
 		std::cout << "Godkiller - Pogchamp:\n";
 		getProperties();
 	}
-	else {
-		//getProperties();
-	}
 	
 }
 
